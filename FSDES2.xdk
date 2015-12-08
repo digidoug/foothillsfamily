@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "appDesigner",
       "projectGuid": "e2cfed30-4858-4b85-a252-2c56589c4c27",
-      "lastModifiedDate": 1449588830840,
+      "lastModifiedDate": 1449590250484,
       "creationDate": 1416421665961
     },
     "XDK-app-designer": "true",
@@ -3945,7 +3945,7 @@
     "cordovaPlugins": [
       {
         "id": "org.apache.cordova.splashscreen",
-        "version": "0.3.0",
+        "version": "0.3.5",
         "selectedState": "Included",
         "data": {},
         "paramvals": {},
@@ -3955,15 +3955,15 @@
         "dependsOn": [],
         "dependedBy": [],
         "topLevel": true,
-        "checksum": "b3c1af48",
+        "checksum": "fb21842c",
         "gitref": "",
         "name": "Splashscreen",
-        "cordovaVersion": ">=4.1.2”,
+        "cordovaVersion": ">=3.1.0",
         "description": "Cordova Splashscreen Plugin"
       },
       {
         "id": "org.apache.cordova.inappbrowser",
-        "version": "0.4.0",
+        "version": "0.5.4",
         "selectedState": "Included",
         "data": {},
         "paramvals": {},
@@ -3973,23 +3973,23 @@
         "dependsOn": [],
         "dependedBy": [],
         "topLevel": true,
-        "checksum": "fde81bfe",
+        "checksum": "92ba911c",
         "gitref": "",
         "name": "InAppBrowser",
         "cordovaVersion": ">=3.1.0",
         "description": "Cordova InAppBrowser Plugin"
       },
       {
-        "id": "cordova-plugin-statusbar",
+        "id": "org.apache.cordova.statusbar",
         "name": "StatusBar",
-        "version": "1.0.0",
+        "version": "0.1.9",
         "originType": "cordova.io",
         "origin": "cordova-plugin-statusbar",
         "gitref": "",
         "paramvals": {},
         "sourceLocation": "plugins/cordova-plugin-statusbar",
         "selectedState": "Included",
-        "checksum": "b4e7aac6",
+        "checksum": "988c20e2",
         "dependsOn": [],
         "topLevel": true,
         "cordovaVersion": ">=3.0.0",
@@ -4079,7 +4079,7 @@
         "addlPermissions_": "",
         "excludedLibraries_": "",
         "iosProvs_": [],
-        "cordovaCLIVersion_": "3.5.0",
+        "cordovaCLIVersion_": "4.1.2",
         "crosswalkVersion_": "stable",
         "appVersion_": "1.01",
         "appDescription_": "FSD serves the learning needs of more than 8,000 students in preschool through grade 12, and employs over 800 teachers and support staff. Located on the City of Calgary’s southern border within the Municipal District of Foothills, the Division encompasses the Towns of Okotoks, High River, Black Diamond and Turner Valley as well as the communities served by our Blackie, Cayley, Heritage Heights (DeWinton), Longview, Millarville and Red Deer Lake (south Calgary) schools.",
@@ -4111,7 +4111,7 @@
         "addlPermissions_": "",
         "excludedLibraries_": "",
         "iosProvs_": [],
-        "cordovaCLIVersion_": "3.5.0",
+        "cordovaCLIVersion_": "4.1.2",
         "crosswalkVersion_": "14",
         "appVersion_": "0.0.1",
         "appDescription_": "",
@@ -4206,7 +4206,7 @@
             "type": "production"
           }
         ],
-        "cordovaCLIVersion_": "3.5.0",
+        "cordovaCLIVersion_": "4.1.2",
         "crosswalkVersion_": "stable",
         "appVersion_": "1.0.2",
         "appDescription_": "FSD serves the learning needs of more than 8,000 students in preschool through grade 12, and employs over 800 teachers and support staff. Located on the City of Calgary’s southern border within the Municipal District of Foothills, the Division encompasses the Towns of Okotoks, High River, Black Diamond and Turner Valley as well as the communities served by our Blackie, Cayley, Heritage Heights (DeWinton), Longview, Millarville and Red Deer Lake (south Calgary) schools.",
@@ -4236,7 +4236,7 @@
         "addlPermissions_": "",
         "excludedLibraries_": "",
         "iosProvs_": [],
-        "cordovaCLIVersion_": "3.5.0",
+        "cordovaCLIVersion_": "4.1.2",
         "crosswalkVersion_": "stable",
         "appVersion_": "0.0.0.1",
         "appDescription_": ""
@@ -4340,7 +4340,7 @@
         "addlPermissions_": "",
         "excludedLibraries_": "",
         "appVersion_": "0.0.0.1",
-        "cordovaCLIVersion_": "5.1.1"
+        "cordovaCLIVersion_": "4.1.2"
       }
     },
     "gameAssetDirectory": "asset",
