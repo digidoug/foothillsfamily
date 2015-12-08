@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "appDesigner",
       "projectGuid": "e2cfed30-4858-4b85-a252-2c56589c4c27",
-      "lastModifiedDate": 1449545789158,
+      "lastModifiedDate": 1449547870998,
       "creationDate": 1416421665961
     },
     "XDK-app-designer": "true",
@@ -4267,7 +4267,7 @@
         "runtime_": "W3C on Chrome OS",
         "name_": "Chrome",
         "preferences_": {},
-        "isActive_": false,
+        "isActive_": true,
         "appName_": "FSDES2",
         "appID_": "not.yet.specified",
         "appAccess_": {
