@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "appDesigner",
       "projectGuid": "e2cfed30-4858-4b85-a252-2c56589c4c27",
-      "lastModifiedDate": 1449547870998,
+      "lastModifiedDate": 1449550863345,
       "creationDate": 1416421665961
     },
     "XDK-app-designer": "true",
@@ -3978,6 +3978,25 @@
         "name": "InAppBrowser",
         "cordovaVersion": ">=3.1.0",
         "description": "Cordova InAppBrowser Plugin"
+      },
+      {
+        "id": "cordova-plugin-statusbar",
+        "name": "StatusBar",
+        "version": "1.0.0",
+        "originType": "cordova.io",
+        "origin": "cordova-plugin-statusbar",
+        "gitref": "",
+        "paramvals": {},
+        "sourceLocation": "plugins/cordova-plugin-statusbar",
+        "selectedState": "Included",
+        "checksum": "b4e7aac6",
+        "dependsOn": [],
+        "topLevel": true,
+        "cordovaVersion": ">=3.0.0",
+        "permissions": {},
+        "description": "Cordova StatusBar Plugin",
+        "data": {},
+        "dependedBy": []
       }
     ],
     "buildConfigurations": {

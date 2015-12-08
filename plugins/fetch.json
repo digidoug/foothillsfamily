@@ -14,5 +14,15 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "cordova-plugin-statusbar": {
+        "source": {
+            "type": "local",
+            "path": "/home/stevens/intel/XDK/xdk/components/server/cordova-plugins/cordova-plugin-statusbar"
+        },
+        "is_top_level": true,
+        "variables": {
+            "StatisBarOverlaysWebview": "false"
+        }
     }
 }
