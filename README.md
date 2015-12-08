@@ -10,4 +10,4 @@ allows you to run your app in any of these environments.
 
 See the *Blank XDK for Cordova Project* template for more information.
 
-  [LICENSE.md]: LICENSE.md# foothillsfamily
+  [LICENSE.md]: LICENSE.md
