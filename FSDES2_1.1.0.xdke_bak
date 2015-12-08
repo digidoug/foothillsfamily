@@ -1,6 +1,6 @@
 {
   "project": {
-    "projectSettingsVersion": "2.0.0",
+    "projectSettingsVersion": "1.1",
     "projectFiles": {},
     "projectDirectories": {},
     "currentService": {
@@ -8,7 +8,6 @@
       "endPoint": "Methods",
       "service": "sandbox"
     },
-    "initialAutoPluginCount": 0,
-    "currentBuildConfiguration": "Android"
+    "initialAutoPluginCount": 0
   }
 }

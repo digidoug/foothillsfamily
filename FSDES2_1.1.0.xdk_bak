@@ -1,12 +1,12 @@
 {
   "project": {
-    "projectSettingsVersion": "2.0.0",
+    "projectSettingsVersion": "1.1",
     "creationData": {
       "type": "App Designer",
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "appDesigner",
       "projectGuid": "e2cfed30-4858-4b85-a252-2c56589c4c27",
-      "lastModifiedDate": 1449545789158,
+      "lastModifiedDate": 1422240631982,
       "creationDate": 1416421665961
     },
     "XDK-app-designer": "true",
@@ -29,7 +29,22 @@
         }
       }
     },
-    "libraries": [],
+    "libraries": [
+      {
+        "name": "Cordova",
+        "version": "2.9.0",
+        "data": {
+          "default": true
+        }
+      },
+      {
+        "name": "intelXDK",
+        "version": "4.0.0",
+        "data": {
+          "default": true
+        }
+      }
+    ],
     "serviceMethods": [
       {
         "methodName": "fsdWEB",
@@ -3948,36 +3963,14 @@
         "version": "0.3.0",
         "selectedState": "Included",
         "data": {},
-        "paramvals": {},
-        "originType": "cordova.io",
-        "origin": "org.apache.cordova.splashscreen",
-        "permissions": {},
-        "dependsOn": [],
-        "dependedBy": [],
-        "topLevel": true,
-        "checksum": "b3c1af48",
-        "gitref": "",
-        "name": "Splashscreen",
-        "cordovaVersion": ">=3.1.0",
-        "description": "Cordova Splashscreen Plugin"
+        "paramvals": {}
       },
       {
         "id": "org.apache.cordova.inappbrowser",
         "version": "0.4.0",
         "selectedState": "Included",
         "data": {},
-        "paramvals": {},
-        "originType": "cordova.io",
-        "origin": "org.apache.cordova.inappbrowser",
-        "permissions": {},
-        "dependsOn": [],
-        "dependedBy": [],
-        "topLevel": true,
-        "checksum": "fde81bfe",
-        "gitref": "",
-        "name": "InAppBrowser",
-        "cordovaVersion": ">=3.1.0",
-        "description": "Cordova InAppBrowser Plugin"
+        "paramvals": {}
       }
     ],
     "buildConfigurations": {
@@ -3993,14 +3986,7 @@
         "isActive_": true,
         "appName_": "Join the Foothills Family",
         "appID_": "com.fsd38.empserv",
-        "appAccess_": {
-          "mode": "legacy",
-          "network": [
-            "*"
-          ],
-          "intents": [],
-          "navigation": []
-        },
+        "appAccess_": "*",
         "icons_": [
           {
             "relPath": "images/fsd36.jpg",
@@ -4057,10 +4043,10 @@
             "orientation": "portrait"
           }
         ],
+        "iosProvs_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
-        "iosProvs_": [],
-        "cordovaCLIVersion_": "3.5.0",
+        "cordovaCLIVersion_": "3.5",
         "crosswalkVersion_": "stable",
         "appVersion_": "1.01",
         "appDescription_": "FSD serves the learning needs of more than 8,000 students in preschool through grade 12, and employs over 800 teachers and support staff. Located on the City of Calgary’s southern border within the Municipal District of Foothills, the Division encompasses the Towns of Okotoks, High River, Black Diamond and Turner Valley as well as the communities served by our Blackie, Cayley, Heritage Heights (DeWinton), Longview, Millarville and Red Deer Lake (south Calgary) schools.",
@@ -4079,21 +4065,14 @@
         "isActive_": true,
         "appName_": "FSDES2",
         "appID_": "xdk.intel.ad.project",
-        "appAccess_": {
-          "mode": "legacy",
-          "network": [
-            "*"
-          ],
-          "intents": [],
-          "navigation": []
-        },
+        "appAccess_": "*",
         "icons_": [],
         "splashes_": [],
+        "iosProvs_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
-        "iosProvs_": [],
-        "cordovaCLIVersion_": "3.5.0",
-        "crosswalkVersion_": "14",
+        "cordovaCLIVersion_": "3.5",
+        "crosswalkVersion_": "stable",
         "appVersion_": "0.0.1",
         "appDescription_": "",
         "appAuthor_": "",
@@ -4112,14 +4091,7 @@
         "isActive_": true,
         "appName_": "Join the Foothills Family",
         "appID_": "com.fsd38.empserv",
-        "appAccess_": {
-          "mode": "legacy",
-          "network": [
-            "*"
-          ],
-          "intents": [],
-          "navigation": []
-        },
+        "appAccess_": "*",
         "icons_": [
           {
             "relPath": "images/fsd120.png",
@@ -4179,15 +4151,15 @@
             "orientation": "portrait"
           }
         ],
-        "addlPermissions_": "",
-        "excludedLibraries_": "",
         "iosProvs_": [
           {
             "relPath": "Join_the_Foothills_Family.mobileprovision",
             "type": "production"
           }
         ],
-        "cordovaCLIVersion_": "3.5.0",
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "cordovaCLIVersion_": "3.5",
         "crosswalkVersion_": "stable",
         "appVersion_": "1.0.1",
         "appDescription_": "FSD serves the learning needs of more than 8,000 students in preschool through grade 12, and employs over 800 teachers and support staff. Located on the City of Calgary’s southern border within the Municipal District of Foothills, the Division encompasses the Towns of Okotoks, High River, Black Diamond and Turner Valley as well as the communities served by our Blackie, Cayley, Heritage Heights (DeWinton), Longview, Millarville and Red Deer Lake (south Calgary) schools.",
@@ -4204,129 +4176,38 @@
         "isActive_": true,
         "appName_": "FSDES2",
         "appID_": "xdk.intel.ad.project",
-        "appAccess_": {
-          "mode": "legacy",
-          "network": [
-            "*"
-          ],
-          "intents": [],
-          "navigation": []
-        },
+        "appAccess_": "*",
         "icons_": [],
         "splashes_": [],
+        "iosProvs_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
-        "iosProvs_": [],
-        "cordovaCLIVersion_": "3.5.0",
+        "cordovaCLIVersion_": "3.5",
         "crosswalkVersion_": "stable",
         "appVersion_": "0.0.0.1",
         "appDescription_": ""
       },
-      "WebApp": {
-        "platform_": "webapp",
-        "runtime_": "W3C",
-        "name_": "WebApp",
-        "preferences_": {},
-        "isActive_": false,
-        "appName_": "FSDES2",
-        "appID_": "not.yet.specified",
-        "appAccess_": {
-          "mode": "legacy",
-          "network": [],
-          "intents": [],
-          "navigation": []
-        },
-        "icons_": [],
-        "splashes_": [],
-        "addlPermissions_": "",
-        "excludedLibraries_": "",
-        "appVersion_": "0.0.1"
-      },
-      "Firefox": {
-        "platform_": "firefoxos",
-        "runtime_": "W3C on Firefox OS",
-        "name_": "Firefox",
-        "preferences_": {},
-        "isActive_": false,
-        "appName_": "FSDES2",
-        "appID_": "not.yet.specified",
-        "appAccess_": {
-          "mode": "legacy",
-          "network": [],
-          "intents": [],
-          "navigation": []
-        },
-        "icons_": [],
-        "splashes_": [],
-        "addlPermissions_": "",
-        "excludedLibraries_": "",
-        "appVersion_": "0.0.1"
-      },
-      "Chrome": {
-        "platform_": "chromeos",
-        "runtime_": "W3C on Chrome OS",
-        "name_": "Chrome",
-        "preferences_": {},
-        "isActive_": false,
-        "appName_": "FSDES2",
-        "appID_": "not.yet.specified",
-        "appAccess_": {
-          "mode": "legacy",
-          "network": [],
-          "intents": [],
-          "navigation": []
-        },
-        "icons_": [],
-        "splashes_": [],
-        "addlPermissions_": "",
-        "excludedLibraries_": "",
-        "appVersion_": "0.0.1"
-      },
-      "Facebook": {
-        "platform_": "facebook",
-        "runtime_": "W3C on Facebook",
-        "name_": "Facebook",
-        "preferences_": {},
-        "isActive_": false,
-        "appName_": "FSDES2",
-        "appID_": "not.yet.specified",
-        "appAccess_": {
-          "mode": "legacy",
-          "network": [],
-          "intents": [],
-          "navigation": []
-        },
-        "icons_": [],
-        "splashes_": [],
-        "addlPermissions_": "",
-        "excludedLibraries_": "",
-        "appVersion_": "0.0.1"
-      },
-      "WP81": {
-        "platform_": "wp81",
+      "WindowsPhone8": {
+        "platform_": "wp8",
         "runtime_": "Cordova 3.x",
-        "name_": "WP81",
+        "name_": "WindowsPhone8",
         "preferences_": {},
         "isActive_": true,
         "appName_": "FSDES2",
-        "appID_": "not.yet.specified",
-        "appAccess_": {
-          "mode": "legacy",
-          "network": [],
-          "intents": [],
-          "navigation": []
-        },
+        "appID_": "xdk.intel.ad.project",
+        "appAccess_": "*",
         "icons_": [],
         "splashes_": [],
+        "iosProvs_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
-        "appVersion_": "0.0.0.1",
-        "cordovaCLIVersion_": "5.1.1"
+        "cordovaCLIVersion_": "3.5",
+        "crosswalkVersion_": "stable",
+        "appVersion_": "0.0.0.1"
       }
     },
     "gameAssetDirectory": "asset",
     "gameMetadata": {},
-    "projectTags": [],
-    "testDirectory": "test"
+    "projectTags": []
   }
 }
