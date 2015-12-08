@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "appDesigner",
       "projectGuid": "e2cfed30-4858-4b85-a252-2c56589c4c27",
-      "lastModifiedDate": 1449550863345,
+      "lastModifiedDate": 1449588830840,
       "creationDate": 1416421665961
     },
     "XDK-app-designer": "true",
@@ -3958,7 +3958,7 @@
         "checksum": "b3c1af48",
         "gitref": "",
         "name": "Splashscreen",
-        "cordovaVersion": ">=3.1.0",
+        "cordovaVersion": ">=4.1.2”,
         "description": "Cordova Splashscreen Plugin"
       },
       {
@@ -4208,7 +4208,7 @@
         ],
         "cordovaCLIVersion_": "3.5.0",
         "crosswalkVersion_": "stable",
-        "appVersion_": "1.0.1",
+        "appVersion_": "1.0.2",
         "appDescription_": "FSD serves the learning needs of more than 8,000 students in preschool through grade 12, and employs over 800 teachers and support staff. Located on the City of Calgary’s southern border within the Municipal District of Foothills, the Division encompasses the Towns of Okotoks, High River, Black Diamond and Turner Valley as well as the communities served by our Blackie, Cayley, Heritage Heights (DeWinton), Longview, Millarville and Red Deer Lake (south Calgary) schools.",
         "appAuthor_": "Foothills School Division"
       },
