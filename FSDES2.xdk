@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "appDesigner",
       "projectGuid": "e2cfed30-4858-4b85-a252-2c56589c4c27",
-      "lastModifiedDate": 1450804399936,
+      "lastModifiedDate": 1450816754401,
       "creationDate": 1416421665961
     },
     "XDK-app-designer": "true",
@@ -4126,7 +4126,7 @@
           "ios-target": "5",
           "ios-configuration": "production",
           "exit-on-suspend": true,
-          "Fullscreen": true
+          "Fullscreen": false
         },
         "isActive_": true,
         "appName_": "Join the Foothills Family",

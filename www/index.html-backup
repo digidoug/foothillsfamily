@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+    <!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="media_button_bar/css/media_button_bar.css">
+        <link rel="stylesheet" type="text/css" href="galleria/galleria.classic.css">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="jqm/jquery.mobile-min.css">
+        <title>Blank App Designer Project Template</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+        <!--
+  * The "meta viewport" tag (below) helps your app size appropriately to a device's screen.
+  * Note that the meta viewport approach is being phased out in favor of the @viewport CSS rule.
+  * For a quick overview of both, see this article:
+  *   http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag
+  * To see what happens, try the app on a real device with and without a "meta viewport" tag.
+-->
+
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+
+        <style>
+            /* following three (cascaded) are equivalent to above three meta viewport statements */
+            /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html */
+            /* see http://dev.w3.org/csswg/css-device-adapt/ */
+            @-ms-viewport {
+                width: 100vw;
+                zoom: 100%;
+            }
+            @viewport {
+                width: 100vw;
+                zoom: 100%;
+            }
+            @-ms-viewport {
+                user-zoom: fixed;
+            }
+            @viewport {
+                user-zoom: fixed;
+            }
+            /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+        </style>
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+
+        <!-- IMPORTANT: Do not include your weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work below -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+
+        <!-- Most third-party libraries should go here. References (below) are just examples to give you the general idea... -->
+        <!-- <script src="lib/mc/hammer.js"></script> -->
+        <!-- <script src="lib/ft/fastclick.js"></script> -->
+
+        <script src="intelxdk.js"></script>
+        <!-- phantom library, needed for XDK "legacy" container api calls -->
+        <script src="cordova.js"></script>
+        <!-- phantom library, needed for Cordova api calls -->
+        <script src="xhr.js"></script>
+        <!-- phantom library, needed for XDK "legacy" container CORS -->
+
+        <script src="js/app.js"></script>
+        <!-- for your event code, see README and file comments for details -->
+        <script src="js/init-app.js"></script>
+        <!-- for your init code, see README and file comments for details -->
+        <script src="xdk/init-dev.js"></script>
+        <!-- normalizes device and document ready events, see file for details -->
+        <script type="application/javascript" src="lib/jquery.min.js"></script>
+        <script type="application/javascript" src="jqm/jquery.mobile-min.js" data-ver="0"></script>
+        <script type="application/javascript" src="sidebar/js/jquery.event.move.js"></script>
+        <script type="application/javascript" src="sidebar/js/jquery.event.swipe.js"></script>
+        <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
+        <script type="application/javascript" src="sidebar/js/swipe.js"></script>
+        <script type="application/javascript" src="galleria/galleria-1.3.6.min.js"></script>
+        <script type="application/javascript" src="galleria/galleria.classic.min.js"></script>
+        <script type="application/javascript" src="galleria/galleria-startup.js"></script>
+        <script type="application/javascript" src="js/index_user_scripts.js"></script>
+        <script type="application/javascript" src="xdk/appdesigner/js/rest-of-space.js"></script>
+        <script type="application/javascript" src="xdk/ad/jqm_subpage.js"></script>
+        <script type="application/javascript" src="lib/jquery-xmlrpc/jquery.xmlrpc.js"></script>
+
+        <style>
+            html,
+            body,
+            #map-canvas {
+                height: 100%;
+                margin-top: 20px;
+                padding: 0px
+            }
+        </style>
+
+        <script type="application/javascript" src="lib/underscore.min.js"></script>
+        <script type="application/javascript" src="lib/backbone.js"></script>
+        <script type="application/javascript" src="lib/Backbone.ModelBinder.min.js"></script>
+        <script type="application/javascript" src="xdk/ad/backbone_support.js"></script>
+        <script type="application/javascript" src="xdk/ad/jquery.ba-throttle-debounce.min.js"></script>
+        <script type="application/javascript" src="xdk/ad/jqm_events_data.js"></script>
+        <script type="application/javascript" src="xdk/services/service-credentials.js"></script>
+        <script type="application/javascript" src="xdk/services/service-methods.js"></script>
+        <script type="application/javascript" src="xdk/ad/ad_events_data.js"></script>
+        <script type="application/javascript" src="js/index_init_services.js"></script>
+        <script type="application/javascript" src="xdk/ad/index_setup_services.js"></script>
+        <script type="application/javascript" src="popup/popup.min.js"></script>
+        <script>
+            $(document).on('click', 'a[href^=http], a[href^=https]', function (e) {
+    
+                e.preventDefault();
+                var $this = $(this);
+                var target = $this.data('inAppBrowser') || '_blank';
+    
+                window.open($this.attr('href'), target, 'location=yes,enableViewportScale=yes');
+            });
+        </script>
+    </head>
+
+    <body>
+        <!-- IMPORTANT: Do not include your weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+        <div class="upage bg" id="mainpage" data-role="page">
+            <div class="upage-outer">
+                <div class="upage-outer">
+                    <div data-role="header" class="container-group inner-element uib_w_3 sh" data-uib="jquery_mobile/header" data-ver="0" data-sc="single" data-theme="a">
+                        <h1>Teaching in FSD</h1>
+                        <div class="widget-container wrapping-col single-centered"></div>
+                        <div class="widget-container content-area horiz-area wrapping-col left">
+                            <a class="widget uib_w_4 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="menubutton" data-icon="bars" data-iconpos="left" data-mini="true">Menu</a>
+                        </div>
+                        <div class="widget-container content-area horiz-area wrapping-col right"></div>
+                    </div>
+
+                    <div class="upage-content content-area vertical-col" id="page_17_94">
+
+                        <div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0">
+                            <div class="col uib_col_4 col-0_12-12" data-uib="layout/col" data-ver="0">
+                                <div class="widget-container content-area vertical-col">
+
+                                    <div class="widget uib_w_18 scale-image d-margins" data-uib="media/img" data-ver="0">
+                                        <figure class="figure-align">
+                                            <img src="images/slides/MillarvilleFoothills.jpg">
+                                            <figcaption data-position="bottom"></figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="widget uib_w_5 scale-image d-margins logo" data-uib="media/img" data-ver="0">
+                                        <figure class="figure-align">
+                                            <img src="images/New FSD Logo_Colour With Tag (CMYK).jpg">
+                                            <figcaption data-position="bottom"></figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="widget uib_w_17 d-margins welcometext" data-uib="media/text" data-ver="0">
+                                        <div class="widget-container left-receptacle"></div>
+                                        <div class="widget-container right-receptacle"></div>
+                                        <div>
+                                            <p>Join the Foothills Family</p>
+                                        </div>
+                                    </div>
+                                    <div class="widget uib_w_41 scale-image d-margins" data-uib="media/img" data-ver="0">
+                                        <figure class="figure-align">
+                                            <img src="images/banner.png">
+                                            <figcaption data-position="bottom"></figcaption>
+                                        </figure>
+                                    </div>
+                                    <span class="uib_shim"></span>
+                                </div>
+                            </div>
+                            <span class="uib_shim"></span>
+                        </div>
+                    </div>
+                    <div class="inner-element uib_w_2 uib_sidebar leftbar bar-bg thumb-bg bar-gutter bar swipe fixed" data-uib="layout/left_sidebar" data-ver="0" data-anim="{'style':'push', 'v':300, 'side':'left'}" id="sidebar">
+
+                        <div class="sidebar-content content-area vertical-col">
+
+                            <div class="widget uib_w_6 ui-content no_wrap outset-margin listview rest-of-height listbox" data-uib="jquery_mobile/listview" data-ver="0">
+                                <ul data-role="listview">
+                                    <li class="widget uib_w_7 list" data-uib="jquery_mobile/listitem" data-ver="0" id="homebutton" data-theme="b" onclick="uib_sb.toggle_sidebar($('#sidebar').css('left', '0'));"><span>Home</span>
+                                    </li>
+                                    <li class="widget uib_w_8 apply" data-uib="jquery_mobile/listitem" data-ver="0" data-theme="a" onclick="uib_sb.toggle_sidebar($('#sidebar').css('left', '0'));"><span>How to Apply</span>
+                                    </li>
+                                    <li class="widget uib_w_40 ltbluebutton" data-uib="jquery_mobile/listitem" data-ver="0" datvensda-theme="a" onclick="uib_sb.toggle_sidebar($('#sidebar').css('left', '0'));" data-theme="a"><span>Working in Foothills</span>
+                                    </li>
+                                    <li class="widget uib_w_9 ltbluebutton" data-uib="jquery_mobile/listitem" data-ver="0" data-theme="a" onclick="uib_sb.toggle_sidebar($('#sidebar').css('left', '0'));"><span>Student Voice</span>
+                                    </li>
+                                    <li class="widget uib_w_11 ltbluebutton" data-uib="jquery_mobile/listitem" data-ver="0" data-theme="a" onclick="uib_sb.toggle_sidebar($('#sidebar').css('left', '0'));"><span>Engaged Learners</span>
+                                    </li>
+
+                                    <li class="widget uib_w_39 ltbluebutton" data-uib="jquery_mobile/listitem" data-ver="0" data-theme="a" onclick="uib_sb.toggle_sidebar($('#sidebar').css('left', '0'));"><span>Wide-Ranging Programming</span>
+                                    </li>
+
+                                    <li class="widget uib_w_13 list" data-uib="jquery_mobile/listitem" data-ver="0" data-theme="a" onclick="uib_sb.toggle_sidebar($('#sidebar').css('left', '0'));"><span>News</span>
+                                    </li>
+                                    <li class="widget uib_w_23 list" data-uib="jquery_mobile/listitem" data-ver="0" data-theme="a" onclick="uib_sb.toggle_sidebar($('#sidebar').css('left', '0'));"><span>The FSD Blog</span>
+                                    </li>
+                                    <li class="widget uib_w_14 list" data-uib="jquery_mobile/listitem" data-ver="0" data-theme="a" onclick="uib_sb.toggle_sidebar($('#sidebar').css('left', '0'));"><span>Contact Us</span>
+                                    </li>
+                                    <li class="widget uib_w_15 list" data-uib="jquery_mobile/listitem" data-ver="0" data-theme="b" onclick="uib_sb.toggle_sidebar($('#sidebar').css('left', '0'));" href="#wherearewe"><span>Where are we?</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="map-canvas" onshow="initialize();" class="upage-content vertical-col hidden"></div>
+            <div id="newmap" class="upage-content vertical-col hidden">
+
+            </div>
+            <div id="mappage" class="upage-content vertical-col hidden"></div>
+            <div id="howtoapply" class="upage-content vertical-col hidden">
+
+                <div class="widget uib_w_27 d-margins list" data-uib="media/text" data-ver="0" data-sc="single">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>How to Apply</p>
+                    </div>
+                </div>
+                <div class="widget uib_w_19 textmargins sh" data-uib="media/text" data-ver="0" data-sc="single">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>Working in Foothills School Division is about being a part of a community dedicated to public education. It's about people committed to student and staff learning as reflected in our Mission Statement: <em>Each learner, entrusted to our care, has unique gifts and abilities. It is our mission to find out what these are... Explore them... Develop them... Celebrate them!</em>
+                        </p>
+                        <p></p>
+
+                        <p>It's also about nurturing students through engaging learning practices to help them achieve their personal best. We are proud of our "Foothills Family", a culture distinguished by a real sense of community, where we support one
+                            another and celebrate each other's successes.</p>
+
+                    </div>
+                </div>
+                <div class="widget uib_w_44 ui-content no_wrap outset-margin d-margins" data-uib="jquery_mobile/listview" data-ver="0">
+                    <ul data-role="listview">
+                        <li class="widget uib_w_45 list" data-uib="jquery_mobile/listitem" data-ver="0" data-theme="a"><span>Administrative</span>
+                        </li>
+                        <li class="widget uib_w_46 list" data-uib="jquery_mobile/listitem" data-ver="0" data-theme="a"><span>Teaching</span>
+                        </li>
+                        <li class="widget uib_w_48 list" data-uib="jquery_mobile/listitem" data-ver="0" data-theme="a"><span>Guest Teaching</span>
+                        </li>
+                        <li class="widget uib_w_47 list" data-uib="jquery_mobile/listitem" data-ver="0" data-theme="a"><span>Non Teaching</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="widget uib_w_49 d-margins" data-uib="media/text" data-ver="0">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <strong>CONTACT:</strong>
+                        Employee Services
+                        <br>Jan Pistawka, Human Resource Manager/Employee Services Team Leader
+                        <br>403-652-6504
+                        <br>
+
+                        <a href="mailto:pistawkaj@fsd38.ab.ca">pistawkaj@fsd38.ab.ca</a>
+                    </div>
+                </div>
+            </div>
+            <div id="news" class="upage-content vertical-col hidden">
+                <div class="widget uib_w_28 d-margins template list" data-uib="media/text" data-ver="0" data-sm="fsdnews" data-sc="single" data-rpath="(base)">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>{{title}}</p>
+                    </div>
+                </div>
+                <div class="widget uib_w_20 template textmargins" data-uib="media/text" data-ver="0" data-sm="fsdnews" data-sc="single" data-rpath="(base)">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>{{content}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="blog" class="upage-content vertical-col hidden">
+                <div class="widget uib_w_29 d-margins ltbluebutton" data-uib="media/text" data-ver="0">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>FSD Leadership Blog</p>
+                    </div>
+                </div>
+                <div class="widget uib_w_21 ui-content no_wrap outset-margin d-margins" data-uib="jquery_mobile/listview" data-ver="0">
+                    <ul data-role="listview">
+                        <li class="widget uib_w_22 template list" data-uib="jquery_mobile/listitem" data-ver="0" data-sm="blog" data-rpath=".posts[]" data-theme="a" id="bloglist"><span>{{title}}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="readblog" class="upage-content vertical-col hidden">
+                <div class="widget uib_w_30 d-margins template list" data-uib="media/text" data-ver="0" data-sm="-- .uib_w_22" data-sc="single" data-rpath="(base)">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>{{title}}</p>
+                    </div>
+                </div>
+                <div class="widget uib_w_24 template textmargins" data-uib="media/text" data-ver="0" data-sm="-- .uib_w_22" data-sc="single" data-rpath="(base)">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>{{content}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="stuvoice" class="upage-content vertical-col hidden">
+                <div class="widget uib_w_31 d-margins template list" data-uib="media/text" data-ver="0" data-sm="studentvoice" data-sc="single" data-rpath="(base)">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>{{title}}</p>
+                    </div>
+                </div>
+                <div class="widget uib_w_32 d-margins template textmargins" data-uib="media/text" data-ver="0" data-sm="studentvoice" data-sc="single" data-rpath="(base)">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>{{content}}</p>
+                    </div>
+                </div>
+            </div>
+            <div id="englearn" class="upage-content vertical-col hidden">
+                <div class="widget uib_w_33 d-margins template list" data-uib="media/text" data-ver="0" data-sm="engagedlearners" data-sc="single" data-rpath="(base)">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>{{title}}</p>
+                    </div>
+                </div>
+                <div class="widget uib_w_34 template textmargins" data-uib="media/text" data-ver="0" data-sm="engagedlearners" data-sc="single" data-rpath="(base)">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>{{content}}</p>
+                    </div>
+                </div>
+            </div>
+            <div id="wrprog" class="upage-content vertical-col hidden">
+                <div class="widget uib_w_35 d-margins template list" data-uib="media/text" data-ver="0" data-sm="widerange" data-sc="single" data-rpath="(base)">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>{{title}}</p>
+                    </div>
+                </div>
+                <div class="widget uib_w_36 template textmargins" data-uib="media/text" data-ver="0" data-sm="widerange" data-sc="single" data-rpath="(base)">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>{{content}}</p>
+                    </div>
+                </div>
+            </div>
+            <div id="staffdev" class="upage-content vertical-col hidden">
+                <div class="widget uib_w_37 d-margins list template" data-uib="media/text" data-ver="0" data-sm="staffdev" data-sc="single" data-rpath="(base)">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>{{title}}</p>
+                    </div>
+                </div>
+                <div class="widget uib_w_38 template textmargins" data-uib="media/text" data-ver="0" data-sm="staffdev" data-sc="single" data-rpath="(base)">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>{{content}}</p>
+                    </div>
+                </div>
+            </div>
+            <div id="newcontact" class="upage-content vertical-col hidden">
+                <div class="widget uib_w_42 d-margins template list" data-uib="media/text" data-ver="0" data-sm="newcontact" data-sc="single" data-rpath="(base)">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>{{title}}</p>
+                    </div>
+                </div>
+                <div class="widget uib_w_43 d-margins template textmargins" data-uib="media/text" data-ver="0" data-sm="newcontact" data-sc="single" data-rpath="(base)">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>{{content}}</p>
+                    </div>
+                </div>
+            </div>
+            <div id="admin" class="upage-content vertical-col hidden">
+                <div class="widget uib_w_56 d-margins template list" data-uib="media/text" data-ver="0" data-sm="admin" data-sc="single" data-rpath="(base)">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>{{title}}</p>
+                    </div>
+                </div>
+                <div class="widget uib_w_57 d-margins template textmargins" data-uib="media/text" data-ver="0" data-sm="admin" data-sc="single" data-rpath="(base)">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>{{content}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="guest" class="upage-content vertical-col hidden">
+                <div class="widget uib_w_50 d-margins template list" data-uib="media/text" data-ver="0" data-sm="guest" data-sc="single" data-rpath="(base)">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>{{title}}</p>
+                    </div>
+                </div>
+                <div class="widget uib_w_51 d-margins template textmargins" data-uib="media/text" data-ver="0" data-sm="guest" data-sc="single" data-rpath="(base)">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>{{content}}</p>
+                    </div>
+                </div>
+            </div>
+            <div id="nonteaching" class="upage-content vertical-col hidden">
+                <div class="widget uib_w_52 d-margins list template" data-uib="media/text" data-ver="0" data-sm="nonteach" data-sc="single" data-rpath="(base)">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>{{title}}</p>
+                    </div>
+                </div>
+                <div class="widget uib_w_53 d-margins textmargins template" data-uib="media/text" data-ver="0" data-sm="nonteach" data-sc="single" data-rpath="(base)">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>{{content}}</p>
+                    </div>
+                </div>
+            </div>
+            <div id="teaching" class="upage-content vertical-col left hidden">
+                <div class="widget uib_w_58 d-margins template list" data-uib="media/text" data-ver="0" data-sm="teach" data-sc="single" data-rpath="(base)">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>{{title}}</p>
+                    </div>
+                </div>
+                <div class="widget uib_w_59 d-margins template textmargins" data-uib="media/text" data-ver="0" data-sm="teach" data-sc="single" data-rpath="(base)">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>{{content}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+        </script>
+
+    </body>
+
+</html>

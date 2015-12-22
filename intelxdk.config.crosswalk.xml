@@ -14,4 +14,7 @@
 <preference name="android-targetSdkVersion" value="19"/>
 <preference name="android-installLocation" value="auto"/>
 <intelxdk:crosswalk version="14"/>
-<!--creationInfo:{"src":"appDesigner","projectTypeName":"com.intel.xdk.projecttype.jsapp"}--></widget>
+<!--creationInfo:{"src":"appDesigner","projectTypeName":"com.intel.xdk.projecttype.jsapp"}-->
+<preference name="StatusBarOverlaysWebView" value="true"/>
+<preference name="StatusBarBackgroundColor" value="#00CCFF"/>
+<preference name="StatusBarStyle" value="lightcontent"/></widget>
