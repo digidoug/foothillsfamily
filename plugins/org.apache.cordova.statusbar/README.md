@@ -17,6 +17,6 @@
          under the License.
 -->
 
-# org.apache.cordova.statusbar 
+# org.apache.cordova.statusbar
 
 Plugin documentation: [doc/index.md](doc/index.md)

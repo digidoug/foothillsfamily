@@ -7,14 +7,6 @@
         "is_top_level": true,
         "variables": {}
     },
-    "org.apache.cordova.statusbar": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-statusbar@0.1.9"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
     "org.apache.cordova.splashscreen": {
         "source": {
             "type": "registry",
@@ -22,5 +14,17 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "org.apache.cordova.statusbar": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-statusbar@0.1.9"
+        },
+        "is_top_level": true,
+        "variables": {
+            "StatusBarOverlaysWebView": "false",
+            "StatusBarBackgroundColor": "#3300CC",
+            "StatusBarStyle": "lightcontent"
+        }
     }
 }

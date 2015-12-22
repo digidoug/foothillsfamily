@@ -8,8 +8,8 @@
     },
     "installed_plugins": {
         "org.apache.cordova.inappbrowser": {},
-        "org.apache.cordova.statusbar": {},
-        "org.apache.cordova.splashscreen": {}
+        "org.apache.cordova.splashscreen": {},
+        "org.apache.cordova.statusbar": {}
     },
     "dependent_plugins": {}
 }

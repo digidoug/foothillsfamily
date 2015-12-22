@@ -26,8 +26,5 @@
 <preference name="ios-configuration" value="production"/>
 <preference name="exit-on-suspend" value="true"/>
 <preference name="Fullscreen" value="true"/>
-<preference name="StatusBarOverlaysWebView" value="true" /> 
-<preference name="StatusBarBackgroundColor" value="#000000" />
-<preference name="StatusBarStyle" value="lightcontent" />
 <intelxdk:provisioning intelxdk:src="Join_the_Foothills_Family.mobileprovision" intelxdk:type="production"/>
 <!--creationInfo:{"src":"appDesigner","projectTypeName":"com.intel.xdk.projecttype.jsapp"}--></widget>
