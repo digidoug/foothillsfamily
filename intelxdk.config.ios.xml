@@ -28,6 +28,6 @@
 <preference name="Fullscreen" value="false"/>
 <intelxdk:provisioning intelxdk:src="Join_the_Foothills_Family.mobileprovision" intelxdk:type="production"/>
 <!--creationInfo:{"src":"appDesigner","projectTypeName":"com.intel.xdk.projecttype.jsapp"}-->
-<preference name="StatusBarOverlaysWebView" value="true"/>
-<preference name="StatusBarBackgroundColor" value="#00CCFF"/>
+<preference name="StatusBarOverlaysWebView" value="false"/>
+<preference name="StatusBarBackgroundColor" value="#3300CC"/>
 <preference name="StatusBarStyle" value="lightcontent"/></widget>

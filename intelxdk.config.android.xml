@@ -25,6 +25,6 @@
 <preference name="android-installLocation" value="auto"/>
 <preference name="splashscreen" value="splash"/>
 <!--creationInfo:{"src":"appDesigner","projectTypeName":"com.intel.xdk.projecttype.jsapp"}-->
-<preference name="StatusBarOverlaysWebView" value="true"/>
-<preference name="StatusBarBackgroundColor" value="#00CCFF"/>
+<preference name="StatusBarOverlaysWebView" value="false"/>
+<preference name="StatusBarBackgroundColor" value="#3300CC"/>
 <preference name="StatusBarStyle" value="lightcontent"/></widget>
