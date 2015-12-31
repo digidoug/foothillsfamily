@@ -7,9 +7,12 @@
         "files": {}
     },
     "installed_plugins": {
-        "org.apache.cordova.inappbrowser": {},
-        "org.apache.cordova.splashscreen": {},
-        "org.apache.cordova.statusbar": {}
+        "cordova-plugin-inappbrowser": {},
+        "cordova-plugin-statusbar": {},
+        "org.apache.cordova.file-transfer": {},
+        "org.apache.cordova.splashscreen": {}
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "org.apache.cordova.file": {}
+    }
 }

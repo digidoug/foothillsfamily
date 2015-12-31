@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "appDesigner",
       "projectGuid": "e2cfed30-4858-4b85-a252-2c56589c4c27",
-      "lastModifiedDate": 1450823920620,
+      "lastModifiedDate": 1451600195694,
       "creationDate": 1416421665961
     },
     "XDK-app-designer": "true",
@@ -3944,26 +3944,8 @@
     "cordovaPluginsDirectory": "plugins",
     "cordovaPlugins": [
       {
-        "id": "org.apache.cordova.splashscreen",
-        "version": "0.3.5",
-        "selectedState": "Included",
-        "data": {},
-        "paramvals": {},
-        "originType": "cordova.io",
-        "origin": "org.apache.cordova.splashscreen",
-        "permissions": {},
-        "dependsOn": [],
-        "dependedBy": [],
-        "topLevel": true,
-        "checksum": "fb21842c",
-        "gitref": "",
-        "name": "Splashscreen",
-        "cordovaVersion": ">=3.1.0",
-        "description": "Cordova Splashscreen Plugin"
-      },
-      {
-        "id": "org.apache.cordova.inappbrowser",
-        "version": "0.5.4",
+        "id": "cordova-plugin-inappbrowser",
+        "version": "1.1.1",
         "selectedState": "Included",
         "data": {},
         "paramvals": {},
@@ -3973,28 +3955,97 @@
         "dependsOn": [],
         "dependedBy": [],
         "topLevel": true,
-        "checksum": "92ba911c",
+        "checksum": "7d6ca575",
         "gitref": "",
         "name": "InAppBrowser",
         "cordovaVersion": ">=3.1.0",
         "description": "Cordova InAppBrowser Plugin"
       },
       {
-        "id": "org.apache.cordova.statusbar",
+        "id": "cordova-plugin-statusbar",
         "name": "StatusBar",
-        "version": "0.1.9",
+        "version": "2.0.0",
         "originType": "cordova.io",
         "origin": "cordova-plugin-statusbar",
         "gitref": "",
         "paramvals": {},
-        "sourceLocation": "plugins/cordova-plugin-statusbar",
+        "sourceLocation": "plugins/org.apache.cordova.statusbar",
         "selectedState": "Included",
-        "checksum": "988c20e2",
+        "checksum": "b92cbbef",
         "dependsOn": [],
         "topLevel": true,
         "cordovaVersion": ">=3.0.0",
         "permissions": {},
         "description": "Cordova StatusBar Plugin",
+        "data": {},
+        "dependedBy": []
+      },
+      {
+        "id": "org.apache.cordova.file",
+        "name": "File",
+        "version": "1.3.3",
+        "originType": "cordova.io",
+        "origin": "org.apache.cordova.file",
+        "gitref": "",
+        "paramvals": {},
+        "sourceLocation": "plugins/org.apache.cordova.file",
+        "selectedState": "Included",
+        "checksum": "542f0a36",
+        "dependsOn": [],
+        "topLevel": false,
+        "cordovaVersion": ">=3.0.0",
+        "permissions": {
+          "android:name": [
+            "android.permission.WRITE_EXTERNAL_STORAGE"
+          ]
+        },
+        "description": "Cordova File Plugin",
+        "data": {},
+        "dependedBy": [
+          "org.apache.cordova.file-transfer"
+        ]
+      },
+      {
+        "id": "org.apache.cordova.file-transfer",
+        "name": "File Transfer",
+        "version": "0.4.8",
+        "originType": "cordova.io",
+        "origin": "cordova-plugin-file-transfer",
+        "gitref": "",
+        "paramvals": {},
+        "sourceLocation": "plugins/org.apache.cordova.file-transfer",
+        "selectedState": "Included",
+        "checksum": "5a21646d",
+        "dependsOn": [
+          "org.apache.cordova.file"
+        ],
+        "topLevel": true,
+        "cordovaVersion": ">=3.0.0",
+        "permissions": {
+          "android:name": [
+            "android.permission.WRITE_EXTERNAL_STORAGE"
+          ]
+        },
+        "description": "Cordova File Transfer Plugin",
+        "data": {},
+        "dependedBy": []
+      },
+      {
+        "id": "org.apache.cordova.splashscreen",
+        "name": "Splashscreen",
+        "version": "0.3.5",
+        "originType": "cordova.io",
+        "origin": "cordova-plugin-splashscreen",
+        "gitref": "",
+        "paramvals": {},
+        "sourceLocation": "plugins/org.apache.cordova.splashscreen",
+        "selectedState": "Included",
+        "checksum": "271836cf",
+        "dependsOn": [],
+        "topLevel": true,
+        "cordovaVersion": ">=3.0.0",
+        "permissions": {},
+        "description": "Cordova Splashscreen Plugin",
         "data": {},
         "dependedBy": []
       }

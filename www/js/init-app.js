@@ -38,11 +38,11 @@ app.initEvents = function() {
     app.consoleLog(fName, "entry") ;
 
     // NOTE: initialize your third-party libraries and event handlers
-
+    
     // initThirdPartyLibraryNumberOne() ;
     // initThirdPartyLibraryNumberTwo() ;
     // initThirdPartyLibraryNumberEtc() ;
-
+   
     // NOTE: initialize your application code
 
     // initMyAppCodeNumberOne() ;
@@ -83,7 +83,7 @@ document.addEventListener("app.Ready", app.initEvents, false) ;
 
 // Just a bunch of useful debug console.log() messages.
 // Runs after underlying device native code and webview/browser is ready.
-// The following is just for debug, not required; keep it if you want or get rid of it.
+// The following is just fo StatusBar.overlaysWebView(false);r debug, not required; keep it if you want or get rid of it.
 
 app.initDebug = function() {
     "use strict" ;
@@ -133,3 +133,9 @@ app.hideSplashScreen = function() {
 
     app.consoleLog(fName, "exit") ;
 } ;
+
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    console.log(StatusBar);
+    StatusBar.overlaysWebView(false);
+}
