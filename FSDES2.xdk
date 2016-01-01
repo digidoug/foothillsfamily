@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "appDesigner",
       "projectGuid": "e2cfed30-4858-4b85-a252-2c56589c4c27",
-      "lastModifiedDate": 1451690058562,
+      "lastModifiedDate": 1451691323622,
       "creationDate": 1416421665961
     },
     "XDK-app-designer": "true",
@@ -3997,54 +3997,6 @@
         "cordovaVersion": ">=3.1.0",
         "permissions": {},
         "description": "Cordova InAppBrowser Plugin",
-        "data": {},
-        "dependedBy": []
-      },
-      {
-        "id": "cordova-plugin-file",
-        "name": "File",
-        "version": "2.1.0",
-        "originType": "cordova.io",
-        "origin": "cordova-plugin-file",
-        "gitref": "",
-        "paramvals": {},
-        "sourceLocation": "plugins/cordova-plugin-file",
-        "selectedState": "Included",
-        "checksum": "a32414d6",
-        "dependsOn": [],
-        "topLevel": false,
-        "permissions": {
-          "android:name": [
-            "android.permission.WRITE_EXTERNAL_STORAGE"
-          ]
-        },
-        "description": "Cordova File Plugin",
-        "data": {},
-        "dependedBy": [
-          "cordova-plugin-file-transfer"
-        ]
-      },
-      {
-        "id": "cordova-plugin-file-transfer",
-        "name": "File Transfer",
-        "version": "1.4.0",
-        "originType": "cordova.io",
-        "origin": "cordova-plugin-file-transfer",
-        "gitref": "",
-        "paramvals": {},
-        "sourceLocation": "plugins/cordova-plugin-file-transfer",
-        "selectedState": "Included",
-        "checksum": "798b20f9",
-        "dependsOn": [
-          "cordova-plugin-file"
-        ],
-        "topLevel": true,
-        "permissions": {
-          "android:name": [
-            "android.permission.WRITE_EXTERNAL_STORAGE"
-          ]
-        },
-        "description": "Cordova File Transfer Plugin",
         "data": {},
         "dependedBy": []
       }
