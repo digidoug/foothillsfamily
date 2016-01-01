@@ -29,4 +29,5 @@
 <preference name="exit-on-suspend" value="true"/>
 <preference name="Fullscreen" value="false"/>
 <intelxdk:provisioning intelxdk:src="Join_the_Foothills_Family.mobileprovision" intelxdk:type="production"/>
-<!--creationInfo:{"src":"appDesigner","projectTypeName":"com.intel.xdk.projecttype.jsapp"}--></widget>
+<!--creationInfo:{"src":"appDesigner","projectTypeName":"com.intel.xdk.projecttype.jsapp"}-->
+<preference name="StatusBarBackgroundColor" value="#000000"/></widget>

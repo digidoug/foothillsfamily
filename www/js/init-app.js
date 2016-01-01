@@ -137,5 +137,7 @@ app.hideSplashScreen = function() {
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
     console.log(StatusBar);
+    StatusBar.styleDefault();
     StatusBar.overlaysWebView(false);
+    StatusBar.backgroundColorByHexString("#0762A6");
 }
