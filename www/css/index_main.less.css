@@ -502,6 +502,14 @@ body:not(#afui) .upage-outer {
 .right-receptacle {
   float: right;
 }
+[data-uib="media/text"] p:first-of-type {
+  margin-top: 0px;
+}
+.ellipsis {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
 @media all {
   .welcometext p {
     font-size: 20px;
