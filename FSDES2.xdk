@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "appDesigner",
       "projectGuid": "e2cfed30-4858-4b85-a252-2c56589c4c27",
-      "lastModifiedDate": 1451672443376,
+      "lastModifiedDate": 1451683233636,
       "creationDate": 1416421665961
     },
     "XDK-app-designer": "true",
@@ -3944,24 +3944,6 @@
     "cordovaPluginsDirectory": "plugins",
     "cordovaPlugins": [
       {
-        "id": "cordova-plugin-inappbrowser",
-        "version": "1.1.1",
-        "selectedState": "Included",
-        "data": {},
-        "paramvals": {},
-        "originType": "cordova.io",
-        "origin": "org.apache.cordova.inappbrowser",
-        "permissions": {},
-        "dependsOn": [],
-        "dependedBy": [],
-        "topLevel": true,
-        "checksum": "7d6ca575",
-        "gitref": "",
-        "name": "InAppBrowser",
-        "cordovaVersion": ">=3.1.0",
-        "description": "Cordova InAppBrowser Plugin"
-      },
-      {
         "id": "cordova-plugin-statusbar",
         "name": "StatusBar",
         "version": "2.0.0",
@@ -3981,21 +3963,40 @@
         "dependedBy": []
       },
       {
-        "id": "org.apache.cordova.splashscreen",
+        "id": "cordova-plugin-splashscreen",
         "name": "Splashscreen",
-        "version": "0.3.5",
+        "version": "2.1.0",
         "originType": "cordova.io",
         "origin": "cordova-plugin-splashscreen",
         "gitref": "",
         "paramvals": {},
         "sourceLocation": "plugins/org.apache.cordova.splashscreen",
         "selectedState": "Included",
-        "checksum": "271836cf",
+        "checksum": "170efb68",
         "dependsOn": [],
         "topLevel": true,
-        "cordovaVersion": ">=3.0.0",
+        "cordovaVersion": ">=3.1.0",
         "permissions": {},
         "description": "Cordova Splashscreen Plugin",
+        "data": {},
+        "dependedBy": []
+      },
+      {
+        "id": "cordova-plugin-inappbrowser",
+        "name": "InAppBrowser",
+        "version": "1.1.0",
+        "originType": "cordova.io",
+        "origin": "cordova-plugin-inappbrowser",
+        "gitref": "",
+        "paramvals": {},
+        "sourceLocation": "plugins/cordova-plugin-inappbrowser",
+        "selectedState": "Included",
+        "checksum": "20096ffc",
+        "dependsOn": [],
+        "topLevel": true,
+        "cordovaVersion": ">=3.1.0",
+        "permissions": {},
+        "description": "Cordova InAppBrowser Plugin",
         "data": {},
         "dependedBy": []
       }
@@ -4006,7 +4007,7 @@
         "runtime_": "Cordova 3.x",
         "name_": "Android",
         "preferences_": {
-          "android-minSdkVersion": "10",
+          "android-minSdkVersion": "14",
           "android-targetSdkVersion": "19",
           "android-installLocation": "auto"
         },
@@ -4023,54 +4024,54 @@
         },
         "icons_": [
           {
-            "relPath": "images/fsd36.jpg",
-            "density": "ldpi",
-            "height": 36,
-            "width": 36
-          },
-          {
-            "relPath": "images/fsd48.jpg",
-            "density": "mdpi",
-            "height": 48,
-            "width": 48
-          },
-          {
-            "relPath": "images/fsd72.jpg",
+            "relPath": "images/fsd72.png",
             "density": "hdpi",
             "height": 72,
             "width": 72
           },
           {
-            "relPath": "images/fsd96.jpg",
+            "relPath": "images/fsd96.png",
             "density": "xhdpi",
             "height": 96,
             "width": 96
+          },
+          {
+            "relPath": "images/fsd36.png",
+            "density": "ldpi",
+            "height": 36,
+            "width": 36
+          },
+          {
+            "relPath": "images/fsd48.png",
+            "density": "mdpi",
+            "height": 48,
+            "width": 48
           }
         ],
         "splashes_": [
           {
-            "relPath": "images/fsd230426.jpg",
+            "relPath": "images/fsd230426.png",
             "density": "ldpi",
             "height": 426,
             "width": 320,
             "orientation": "portrait"
           },
           {
-            "relPath": "images/fsd320470.jpg",
+            "relPath": "images/fsd320470.png",
             "density": "mdpi",
             "height": 470,
             "width": 320,
             "orientation": "portrait"
           },
           {
-            "relPath": "images/fsd480640.jpg",
+            "relPath": "images/fsd480640.png",
             "density": "hdpi",
             "height": 640,
             "width": 480,
             "orientation": "portrait"
           },
           {
-            "relPath": "images/fsd720960.jpg",
+            "relPath": "images/fsd720960.png",
             "density": "xhdpi",
             "height": 960,
             "width": 720,
@@ -4080,7 +4081,7 @@
         "addlPermissions_": "",
         "excludedLibraries_": "",
         "iosProvs_": [],
-        "cordovaCLIVersion_": "4.1.2",
+        "cordovaCLIVersion_": "5.1.1",
         "crosswalkVersion_": "stable",
         "appVersion_": "1.03",
         "appDescription_": "FSD serves the learning needs of more than 8,000 students in preschool through grade 12, and employs over 800 teachers and support staff. Located on the City of Calgary’s southern border within the Municipal District of Foothills, the Division encompasses the Towns of Okotoks, High River, Black Diamond and Turner Valley as well as the communities served by our Blackie, Cayley, Heritage Heights (DeWinton), Longview, Millarville and Red Deer Lake (south Calgary) schools.",
@@ -4112,8 +4113,8 @@
         "addlPermissions_": "",
         "excludedLibraries_": "",
         "iosProvs_": [],
-        "cordovaCLIVersion_": "4.1.2",
-        "crosswalkVersion_": "14",
+        "cordovaCLIVersion_": "5.1.1",
+        "crosswalkVersion_": "15",
         "appVersion_": "0.0.1",
         "appDescription_": "",
         "appAuthor_": "",
@@ -4207,9 +4208,9 @@
             "type": "production"
           }
         ],
-        "cordovaCLIVersion_": "4.1.2",
+        "cordovaCLIVersion_": "5.1.1",
         "crosswalkVersion_": "stable",
-        "appVersion_": "1.0.2",
+        "appVersion_": "1.0.3",
         "appDescription_": "FSD serves the learning needs of more than 8,000 students in preschool through grade 12, and employs over 800 teachers and support staff. Located on the City of Calgary’s southern border within the Municipal District of Foothills, the Division encompasses the Towns of Okotoks, High River, Black Diamond and Turner Valley as well as the communities served by our Blackie, Cayley, Heritage Heights (DeWinton), Longview, Millarville and Red Deer Lake (south Calgary) schools.",
         "appAuthor_": "Foothills School Division"
       },
@@ -4237,7 +4238,7 @@
         "addlPermissions_": "",
         "excludedLibraries_": "",
         "iosProvs_": [],
-        "cordovaCLIVersion_": "4.1.2",
+        "cordovaCLIVersion_": "5.1.1",
         "crosswalkVersion_": "stable",
         "appVersion_": "0.0.0.1",
         "appDescription_": ""
@@ -4341,7 +4342,7 @@
         "addlPermissions_": "",
         "excludedLibraries_": "",
         "appVersion_": "0.0.0.1",
-        "cordovaCLIVersion_": "4.1.2"
+        "cordovaCLIVersion_": "5.1.1"
       }
     },
     "gameAssetDirectory": "asset",

@@ -1,12 +1,4 @@
 {
-    "cordova-plugin-inappbrowser": {
-        "source": {
-            "type": "registry",
-            "id": "org.apache.cordova.inappbrowser@1.1.1"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
     "cordova-plugin-statusbar": {
         "source": {
             "type": "registry",
@@ -23,10 +15,18 @@
         "is_top_level": false,
         "variables": {}
     },
-    "org.apache.cordova.splashscreen": {
+    "cordova-plugin-splashscreen": {
+        "source": {
+            "type": "local",
+            "path": "/home/stevens/intel/XDK/xdk/components/server/cordova-plugins/cordova-plugin-splashscreen"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-inappbrowser": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-splashscreen@0.3.5"
+            "id": "cordova-plugin-inappbrowser@1.1.0"
         },
         "is_top_level": true,
         "variables": {}

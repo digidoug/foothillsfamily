@@ -228,6 +228,13 @@
          activate_subpage("#teaching"); 
     });
     
+        /* listitem  About App */
+    $(document).on("click", ".uib_w_61", function(evt)
+    {
+         /*global activate_subpage */
+         activate_subpage("#aboutapp"); 
+    });
+    
     }
     document.addEventListener("app.Ready", register_event_handlers, false);
 })();
