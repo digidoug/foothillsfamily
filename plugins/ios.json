@@ -9,7 +9,10 @@
     "installed_plugins": {
         "cordova-plugin-statusbar": {},
         "cordova-plugin-splashscreen": {},
-        "cordova-plugin-inappbrowser": {}
+        "cordova-plugin-inappbrowser": {},
+        "cordova-plugin-file-transfer": {}
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-file": {}
+    }
 }
