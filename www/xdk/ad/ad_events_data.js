@@ -1,47 +1,56 @@
+/*jshint browser:true */
+/*global $, intel, data_support, utils, console */
+
 (function()
  {
+    "use strict";
+
      if(!window.data_support)
      {
        window.data_support = {}; //namespace
      }
-   
-     /* ---------------- 
+
+     /* ----------------
       data_event_handlers
       ---------------- */
      window.data_event_handlers = {
                                     on_init_proplist:{},
                                     on_data_proplist:{},      //<-- this is really more on_render
-                                    on_click_proplist:{},     
+                                    on_click_proplist:{},
                                     tags:{"standard-list":{child:"li", parent:"ul"}}
-                                  };    
-     
-     
+                                  };
+
+
     window.data_event_handlers.on_click_proplist["standard-list"] = function(selector)
-    { 
+    {
         var safe_name = data_support.safe_name(selector);
         return function(entry){  $(document).trigger(safe_name+"_data", [entry]); };
     };
-   
-   
-   /* ---------------- 
+
+
+   /* ----------------
       safe_name
       ---------------- */
     data_support.safe_name = function(name)
     {
         return name.replace("#", "").replace(".", "").replace("-", "_").replace(":", "");
     };
-   
-   /* ---------------- 
+
+   /* ----------------
       ready/late
       ---------------- */
    var ready_promises = [];
+   var service_calls  = [];
+
    data_support.ready = function(f)
    {
+     service_calls.push(f);
+
      var deferred = $.Deferred();
      ready_promises.push(deferred.promise());
      var call_f = function()
-                  { 
-                      var res =  f(); 
+                  {
+                      var res =  f();
                       if(res.then){ res.then(deferred.resolve).fail(deferred.reject); }
                       else{ deferred.resolve(true); }
                   };
@@ -59,36 +68,44 @@
       document.addEventListener("app.Ready", function()
       {
           $.when.apply(null, ready_promises).always(f);
-      }, 
+      },
       false);
    };
-   
-   
+
+    /* --------------
+       refresh_all_services
+      -------------- */
+    data_support.refresh_all_services = function()
+    {
+        service_calls.forEach(function(f){ f(); });
+    };
+
+
    /* ----------------
-      case/switch dispatch 
+      case/switch dispatch
       ---------------- */
-   
+
     if(!window.utils){ window.utils = {}; }
-   
-    var dispatch_table = {};  
+
+    var dispatch_table = {};
     function get_dispatch_obj(instance_name)
     {
       var dispatch_obj = dispatch_table[instance_name];
       if(!dispatch_obj) //set up a dispatch obj on the table if there isn't one already.
-      { 
+      {
         dispatch_obj = {}; //?
         dispatch_table[instance_name] = dispatch_obj;
       }
       return dispatch_obj;
     }
-    
+
      /**
       dispatch_case
       @param {String} instance_name
       @param {*} case_identifier (usually a string)
       @param {Function} f
-      
-       Use the case_identifier of "default" to set a default action. 
+
+       Use the case_identifier of "default" to set a default action.
       */
     window.utils.dispatch_case = function(instance_name, case_identifier, f)
     {
@@ -96,13 +113,13 @@
       //add the case
       dispatch_obj[case_identifier] = f;
     };
-    
+
      /**
      dispatch_switch
      @param {String} instance_name
      @param {*} case_identifier (usually a string) -- the case you want to select.
      @rest  args -- these args will be passed to the case function.
-     
+
       note, if there is no match and no default case, this will throw an error.
      */
     window.utils.dispatch_switch = function()
@@ -119,11 +136,11 @@
       }
       else
       {
-        throw new Error("no matching case found for dispatch " + instance_name + "  " + case_identifier); 
+        throw new Error("no matching case found for dispatch " + instance_name + "  " + case_identifier);
       }
     };
-   
-   
+
+
     /* ---------------
       data driving
       --------------- */
@@ -133,44 +150,44 @@
      var f = $.debounce( 300, function(){ intel.xdk.services["call_" + data.service](); } );
      return utils.dispatch_switch("driving-on-change", data.uib, domNode, data, f);
    }
-   
+
    function driving_setup(domNode, data)
    {
      return utils.dispatch_switch("driving-basic", data.uib, domNode, data);
    }
-   
+
    function driving_get_value(domNode, data)
    {
      return utils.dispatch_switch("driving-get-value", data.uib, domNode, data);
    }
-   
+
    //SETUP
-   utils.dispatch_case("driving-on-change", "default", 
-                       function(domNode, data, f){ console.log("driving-on-change, uib not matched", data.uib, data); });
-   
+   utils.dispatch_case("driving-on-change", "default",
+                       function(domNode, data, f){ console.log("driving-on-change, uib not matched", data.uib, data, f); });
+
    utils.dispatch_case("driving-on-change", "standard-list",
                        function(domNode, data, f){ $(document).on(data.identifier, f); });
-   utils.dispatch_case("driving-get-value", "default", 
-                       function(domNode, data, f){ console.log("driving-get-value, uib not matched", data.uib, data); });
+   utils.dispatch_case("driving-get-value", "default",
+                       function(domNode, data, f){ console.log("driving-get-value, uib not matched", data.uib, data, f); });
    utils.dispatch_case("driving-get-value", "standard-list",
                        function(domNode, data)
                         {
                             return last_data[data.identifier][data.key];
                         });
    //setup basic
-   utils.dispatch_case("driving-basic", "default", 
-                       function(domNode, data, f){ console.log("driving-basic, uib not matched", data.uib, data); });
+   utils.dispatch_case("driving-basic", "default",
+                       function(domNode, data, f){ console.log("driving-basic, uib not matched", data.uib, data, f); });
    utils.dispatch_case("driving-basic", "standard-list",
                        function(domNode, data)
-                       { 
+                       {
                          $(document).on(data.identifier, function(evt, val){  last_data[data.identifier] = val; });
                        });
-   
+
     function dquote(str)
     {
        return str.replace(/'/g, "\"");
     }
-   
+
    function push_unique(arr, entry, comparef)
     {
         var i;
@@ -181,7 +198,7 @@
         arr.push(entry);
         return true;
     }
-   
+
    window.init_data_driving = function()
    {
       var $drivers = $("[data-driving]");
@@ -204,8 +221,8 @@
                                                function(old_entry, new_entry){ return (old_entry.data.field == new_entry.data.field); });
                     }
                     else
-                    { 
-                        driven_services[data.service] = [{domNode:domNode, data:data}]; 
+                    {
+                        driven_services[data.service] = [{domNode:domNode, data:data}];
                     }
                     if(modified)
                     {
@@ -218,19 +235,19 @@
                 }
             });
         }
-        catch(er){ console.log("parse failure", str, er); }
+        catch(er){ console.log("parse failure", str, er, index); }
       });
       Object.keys(driven_services).forEach(function(service)
       {
 
           intel.xdk.services["call_" + service] = function()
-                                                  { 
+                                                  {
                                                       var options = {};
                                                       driven_services[service].forEach(function(entry)
                                                       {
                                                           options[entry.data.field] = driving_get_value(entry.domNode, entry.data);
                                                       });
-                                                      return intel.xdk.services[service](options); 
+                                                      return intel.xdk.services[service](options);
                                                   };
       });
    };

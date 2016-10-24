@@ -11,5 +11,8 @@
 <intelxdk:plugin intelxdk:name="Splashscreen" intelxdk:value="cordova-plugin-splashscreen" intelxdk:version="2.1.0" intelxdk:checksum="170efb68" intelxdk:type="file"/>
 <intelxdk:plugin intelxdk:name="InAppBrowser" intelxdk:value="cordova-plugin-inappbrowser" intelxdk:version="1.1.0" intelxdk:checksum="20096ffc" intelxdk:type="file"/>
 <preference name="windows-publisher-display-name"/>
+<preference name="windows-publisher-id"/>
+<preference name="windows-target-version" value="10.0"/>
+<preference name="windows-phone-target-version" value="10.0"/>
 <!--creationInfo:{"src":"appDesigner","projectTypeName":"com.intel.xdk.projecttype.jsapp"}-->
 <preference name="StatusBarBackgroundColor" value="#000000"/></widget>

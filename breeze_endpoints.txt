@@ -1,0 +1,32 @@
+Here are the IDs for the new pages. 
+http://www.fsd38.ab.ca/supportive-environment/ 
+ID=341
+http://www.fsd38.ab.ca/what-attracted-you-to-foothills/ 
+ID=343
+http://www.fsd38.ab.ca/what-do-you-like-about-working-in-foothills/ 
+ID=369
+http://www.fsd38.ab.ca/non-teaching-positions-new/ 
+ID=347
+http://www.fsd38.ab.ca/guest-teaching-opportunities-2/ 
+ID=349
+http://www.fsd38.ab.ca/teaching-positions-new/ 
+ID=351
+http://www.fsd38.ab.ca/administrative-positions-new/ 
+There were two outdated documents at the bottom of this page that I did not move over
+ID=353
+http://www.fsd38.ab.ca/careers-new/ 
+ID=355
+http://www.fsd38.ab.ca/contact/
+I had to rename this one because a page with that name was already created http://www.fsd38.ab.ca/careers-contact/
+ID=357
+http://www.fsd38.ab.ca/careers-in-foothills/ 
+ID=359
+http://www.fsd38.ab.ca/comprehensive-staff-development/ 
+ID=361
+http://www.fsd38.ab.ca/wide-ranging-programming/ 
+ID=363
+http://www.fsd38.ab.ca/engaged-learners/ 
+ID=365
+http://www.fsd38.ab.ca/student-voice/ 
+ID=367
+

@@ -120,10 +120,10 @@
         <!-- IMPORTANT: Do not include your weinre script tag as part of your release builds! -->
         <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
         <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
-        <div class="upage bg" id="mainpage" data-role="page">
+        <div class="upage bg ui-page-theme-a" id="mainpage" data-role="page">
             <div class="upage-outer">
                 <div class="upage-outer">
-                    <div data-role="header" class="container-group inner-element uib_w_3 sh" data-uib="jquery_mobile/header" data-ver="0" data-sc="single" data-theme="a">
+                    <div data-role="header" class="container-group inner-element uib_w_3 sh" data-uib="jquery_mobile/header" data-ver="0" data-theme="a">
                         <h1>Teaching in FSD</h1>
                         <div class="widget-container wrapping-col single-centered"></div>
                         <div class="widget-container content-area horiz-area wrapping-col left">
@@ -207,15 +207,16 @@
                     </div>
                 </div>
 
-                <div id="aboutapp" class="upage-content vertical-col left hidden">
+                <div id="aboutapp" class="upage-content vertical-col hidden">
                     <div class="tarea widget uib_w_60 d-margins" data-uib="media/text" data-ver="0" name="uib_w_60">
                         <div class="widget-container left-receptacle"></div>
                         <div class="widget-container right-receptacle"></div>
                         <div class="text-container">
-                            <div class="list">About This App</div>
+                            <p>About This App</p>
+
                             <h2>Join the Foothills Family</h2>
 
-                            <p><strong>v. 1.0.3<br>
+                            <p><strong>v. 1.1.0<br>
 Copyright 2014-2016<br>
 All Rights Reserved</strong>
                             </p>
@@ -224,7 +225,7 @@ All Rights Reserved</strong>
                                 <br>P.O. Box 5700
                                 <br>120 5th Ave W.&nbsp;
                                 <br>High River, AB T1V 1M7
-                                <br><a href="http://www.fsd38.ab.ca">http://www.fsd38.ab.ca</a>
+                                <br>http://www.fsd38.ab.ca
                                 <br>(403)652-3001
                             </p>
                         </div>
@@ -286,14 +287,14 @@ All Rights Reserved</strong>
                 </div>
             </div>
             <div id="news" class="upage-content vertical-col hidden">
-                <div class="widget uib_w_28 d-margins template list" data-uib="media/text" data-ver="0" data-sm="fsdnews" data-sc="single" data-rpath="(base)">
+                <div class="widget uib_w_28 d-margins list template" data-uib="media/text" data-ver="0">
                     <div class="widget-container left-receptacle"></div>
                     <div class="widget-container right-receptacle"></div>
                     <div>
                         <p>{{title}}</p>
                     </div>
                 </div>
-                <div class="widget uib_w_20 template textmargins" data-uib="media/text" data-ver="0" data-sm="fsdnews" data-sc="single" data-rpath="(base)">
+                <div class="widget uib_w_20 textmargins template" data-uib="media/text" data-ver="0">
                     <div class="widget-container left-receptacle"></div>
                     <div class="widget-container right-receptacle"></div>
                     <div>
@@ -303,29 +304,28 @@ All Rights Reserved</strong>
             </div>
 
             <div id="blog" class="upage-content vertical-col hidden">
-                <div class="widget uib_w_29 d-margins ltbluebutton" data-uib="media/text" data-ver="0">
+                <div class="widget uib_w_29 d-margins ltbluebutton" data-uib="media/text" data-ver="0" data-sm="none" data-sc="single">
                     <div class="widget-container left-receptacle"></div>
                     <div class="widget-container right-receptacle"></div>
                     <div>
                         <p>FSD Leadership Blog</p>
                     </div>
-                </div>
+                </div><a class="widget uib_w_62 d-margins list" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-sm="blognew1" data-sc="multiple" id="bloglink" data-rpath="(base)">{{0.title}}</a>
                 <div class="widget uib_w_21 ui-content no_wrap outset-margin d-margins" data-uib="jquery_mobile/listview" data-ver="0">
                     <ul data-role="listview">
-                        <li class="widget uib_w_22 template list" data-uib="jquery_mobile/listitem" data-ver="0" data-sm="blog" data-rpath=".posts[]" data-theme="a" id="bloglist"><span>{{title}}</span>
-                        </li>
+
                     </ul>
                 </div>
             </div>
             <div id="readblog" class="upage-content vertical-col hidden">
-                <div class="widget uib_w_30 d-margins template list" data-uib="media/text" data-ver="0" data-sm="-- .uib_w_22" data-sc="single" data-rpath="(base)">
+                <div class="widget uib_w_30 d-margins list" data-uib="media/text" data-ver="0">
                     <div class="widget-container left-receptacle"></div>
                     <div class="widget-container right-receptacle"></div>
                     <div>
                         <p>{{title}}</p>
                     </div>
                 </div>
-                <div class="widget uib_w_24 template textmargins" data-uib="media/text" data-ver="0" data-sm="-- .uib_w_22" data-sc="single" data-rpath="(base)">
+                <div class="widget uib_w_24 textmargins" data-uib="media/text" data-ver="0">
                     <div class="widget-container left-receptacle"></div>
                     <div class="widget-container right-receptacle"></div>
                     <div>
@@ -335,30 +335,24 @@ All Rights Reserved</strong>
             </div>
 
             <div id="stuvoice" class="upage-content vertical-col hidden">
-                <div class="widget uib_w_31 d-margins template list" data-uib="media/text" data-ver="0" data-sm="studentvoice" data-sc="single" data-rpath="(base)">
+
+                <div class="tarea widget uib_w_63 d-margins list" data-uib="media/text" data-ver="0" name="uib_w_63" data-sm="stuvoice" data-sc="single" data-rpath="(base)">
                     <div class="widget-container left-receptacle"></div>
                     <div class="widget-container right-receptacle"></div>
-                    <div>
+                    <div class="text-container">
                         <p>{{title}}</p>
-                    </div>
-                </div>
-                <div class="widget uib_w_32 d-margins template textmargins" data-uib="media/text" data-ver="0" data-sm="studentvoice" data-sc="single" data-rpath="(base)">
-                    <div class="widget-container left-receptacle"></div>
-                    <div class="widget-container right-receptacle"></div>
-                    <div>
-                        <p>{{content}}</p>
                     </div>
                 </div>
             </div>
             <div id="englearn" class="upage-content vertical-col hidden">
-                <div class="widget uib_w_33 d-margins template list" data-uib="media/text" data-ver="0" data-sm="engagedlearners" data-sc="single" data-rpath="(base)">
+                <div class="widget uib_w_33 d-margins list template" data-uib="media/text" data-ver="0">
                     <div class="widget-container left-receptacle"></div>
                     <div class="widget-container right-receptacle"></div>
                     <div>
                         <p>{{title}}</p>
                     </div>
                 </div>
-                <div class="widget uib_w_34 template textmargins" data-uib="media/text" data-ver="0" data-sm="engagedlearners" data-sc="single" data-rpath="(base)">
+                <div class="widget uib_w_34 textmargins template" data-uib="media/text" data-ver="0">
                     <div class="widget-container left-receptacle"></div>
                     <div class="widget-container right-receptacle"></div>
                     <div>
@@ -367,14 +361,14 @@ All Rights Reserved</strong>
                 </div>
             </div>
             <div id="wrprog" class="upage-content vertical-col hidden">
-                <div class="widget uib_w_35 d-margins template list" data-uib="media/text" data-ver="0" data-sm="widerange" data-sc="single" data-rpath="(base)">
+                <div class="widget uib_w_35 d-margins list template" data-uib="media/text" data-ver="0">
                     <div class="widget-container left-receptacle"></div>
                     <div class="widget-container right-receptacle"></div>
                     <div>
                         <p>{{title}}</p>
                     </div>
                 </div>
-                <div class="widget uib_w_36 template textmargins" data-uib="media/text" data-ver="0" data-sm="widerange" data-sc="single" data-rpath="(base)">
+                <div class="widget uib_w_36 textmargins template" data-uib="media/text" data-ver="0">
                     <div class="widget-container left-receptacle"></div>
                     <div class="widget-container right-receptacle"></div>
                     <div>
@@ -448,14 +442,14 @@ All Rights Reserved</strong>
                 </div>
             </div>
             <div id="nonteaching" class="upage-content vertical-col hidden">
-                <div class="widget uib_w_52 d-margins list template" data-uib="media/text" data-ver="0" data-sm="nonteach" data-sc="single" data-rpath="(base)">
+                <div class="widget uib_w_52 d-margins list template" data-uib="media/text" data-ver="0">
                     <div class="widget-container left-receptacle"></div>
                     <div class="widget-container right-receptacle"></div>
                     <div>
                         <p>{{title}}</p>
                     </div>
                 </div>
-                <div class="widget uib_w_53 d-margins textmargins template" data-uib="media/text" data-ver="0" data-sm="nonteach" data-sc="single" data-rpath="(base)">
+                <div class="widget uib_w_53 d-margins textmargins template" data-uib="media/text" data-ver="0">
                     <div class="widget-container left-receptacle"></div>
                     <div class="widget-container right-receptacle"></div>
                     <div>
@@ -463,15 +457,15 @@ All Rights Reserved</strong>
                     </div>
                 </div>
             </div>
-            <div id="teaching" class="upage-content vertical-col left hidden">
-                <div class="widget uib_w_58 d-margins template list" data-uib="media/text" data-ver="0" data-sm="teach" data-sc="single" data-rpath="(base)">
+            <div id="teaching" class="upage-content vertical-col hidden">
+                <div class="widget uib_w_58 d-margins list template" data-uib="media/text" data-ver="0">
                     <div class="widget-container left-receptacle"></div>
                     <div class="widget-container right-receptacle"></div>
                     <div>
                         <p>{{title}}</p>
                     </div>
                 </div>
-                <div class="widget uib_w_59 d-margins template textmargins" data-uib="media/text" data-ver="0" data-sm="teach" data-sc="single" data-rpath="(base)">
+                <div class="widget uib_w_59 d-margins textmargins template" data-uib="media/text" data-ver="0">
                     <div class="widget-container left-receptacle"></div>
                     <div class="widget-container right-receptacle"></div>
                     <div>

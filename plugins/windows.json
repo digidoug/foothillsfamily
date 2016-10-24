@@ -7,9 +7,15 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-statusbar": {},
-        "cordova-plugin-splashscreen": {},
-        "cordova-plugin-inappbrowser": {}
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "HelloCordova"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "HelloCordova"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "HelloCordova"
+        }
     },
     "dependent_plugins": {}
 }
