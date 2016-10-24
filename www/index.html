@@ -336,11 +336,18 @@ All Rights Reserved</strong>
 
             <div id="stuvoice" class="upage-content vertical-col hidden">
 
-                <div class="tarea widget uib_w_63 d-margins list" data-uib="media/text" data-ver="0" name="uib_w_63" data-sm="stuvoice" data-sc="single" data-rpath="(base)">
+                <div class="tarea widget uib_w_63 d-margins list template" data-uib="media/text" data-ver="0" name="uib_w_63" data-sm="stuvoice" data-sc="single" data-rpath="(base)" id="{{title}}">
                     <div class="widget-container left-receptacle"></div>
                     <div class="widget-container right-receptacle"></div>
                     <div class="text-container">
-                        <p>{{title}}</p>
+                        <p>{{.title}}</p>
+                    </div>
+                </div>
+                <div class="tarea widget uib_w_64 d-margins textmargins template" data-uib="media/text" data-ver="0" name="uib_w_64" data-sm="stuvoice" data-sc="single" data-rpath="(base)">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div class="text-container">
+                        <p>{{html}}</p>
                     </div>
                 </div>
             </div>

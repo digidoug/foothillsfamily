@@ -53,6 +53,17 @@ data_views.single.push({"selector":".uib_w_53","options":{"effect":["html","attr
 data_views.single.push({"selector":".uib_w_58","options":{"effect":["html","attributes"]}});
 data_views.single.push({"selector":".uib_w_59","options":{"effect":["html","attributes"]}});
 
+data_views.single.push({"selector":".uib_w_64","options":{"effect":["html","attributes"]}});
+data_views.single.push({"selector":".uib_w_63","options":{"effect":["html","attributes"]}});
+data_views.single.push({"selector":"#{{tite","options":{"effect":["html","attributes"]}});
+
+data_views.single.push({"selector":"#{{titl;el","options":{"effect":["html","attributes"]}});
+data_views.single.push({"selector":"#{{tit","options":{"effect":["html","attributes"]}});
+data_views.single.push({"selector":"#{{titl","options":{"effect":["html","attributes"]}});
+data_views.single.push({"selector":"#{{title","options":{"effect":["html","attributes"]}});
+data_views.single.push({"selector":"#{{title}","options":{"effect":["html","attributes"]}});
+
+data_views.single.push({"selector":"#{{title}}","options":{"effect":["html","attributes"]}});
 /* prepare controllers */
 
 
@@ -84,3 +95,14 @@ data_support.prepare_mvc(".uib_w_53", "intel.xdk.services.nonteach", [], "null",
 data_support.prepare_mvc(".uib_w_58", "intel.xdk.services.teach", [], "null", data_views);
 data_support.prepare_mvc(".uib_w_59", "intel.xdk.services.teach", [], "null", data_views);
 
+data_support.prepare_mvc(".uib_w_64", "intel.xdk.services.stuvoice", [], "null", data_views);
+data_support.prepare_mvc(".uib_w_63", "intel.xdk.services.stuvoice", [], "null", data_views);
+data_support.prepare_mvc("#{{tite", "intel.xdk.services.stuvoice", [], "null", data_views);
+
+data_support.prepare_mvc("#{{titl;el", "intel.xdk.services.stuvoice", [], "null", data_views);
+data_support.prepare_mvc("#{{tit", "intel.xdk.services.stuvoice", [], "null", data_views);
+data_support.prepare_mvc("#{{titl", "intel.xdk.services.stuvoice", [], "null", data_views);
+data_support.prepare_mvc("#{{title", "intel.xdk.services.stuvoice", [], "null", data_views);
+data_support.prepare_mvc("#{{title}", "intel.xdk.services.stuvoice", [], "null", data_views);
+
+data_support.prepare_mvc("#{{title}}", "intel.xdk.services.stuvoice", [], "null", data_views);
