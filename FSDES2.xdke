@@ -14,7 +14,9 @@
     "currentEditorMode": 1
   },
   "build-tab": {
-    "selectedTargets": []
+    "selectedTargets": [
+      "CORDOVA_ANDROID"
+    ]
   },
   "simulator": {
     "cordova-simulate": {
