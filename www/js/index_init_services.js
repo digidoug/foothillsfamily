@@ -7,9 +7,9 @@
 
 
 
-data_support.ready(intel.xdk.services.fsdnews.bind(null, {"xdkFilter":null}));
-data_support.ready(intel.xdk.services.blog.bind(null, {"xdkFilter":null}));
-data_support.ready(intel.xdk.services.aboutus.bind(null, {
+//data_support.ready(intel.xdk.services.fsdnews.bind(null, {"xdkFilter":null}));
+//data_support.ready(intel.xdk.services.blog.bind(null, {"xdkFilter":null}));
+/*data_support.ready(intel.xdk.services.aboutus.bind(null, {
     "URL": "https://public-api.wordpress.com/rest/v1/sites/www.fsd38.ab.ca/posts/54",
     "xdkFilter": null
 }));
@@ -39,5 +39,8 @@ data_support.ready(intel.xdk.services.admin.bind(null, {
 data_support.ready(intel.xdk.services.teach.bind(null, {"xdkFilter":null}));
 data_support.ready(intel.xdk.services.stuvoice2.bind(null, {"xdkFilter":null}));
 data_support.ready(intel.xdk.services.NewBlogFeed.bind(null, {"xdkFilter":null}));
-data_support.ready(intel.xdk.services.NewStudentVoice.bind(null, {"xdkFilter":null}));
-data_support.ready(intel.xdk.services.stuvoice.bind(null, {"xdkFilter":null}));
+data_support.ready(intel.xdk.services.NewStudentVoice.bind(null, {"xdkFilter":null}));*/
+data_support.ready(intel.xdk.services.asrest.bind(null, {
+    "URL": "http://www.fsd38.ab.ca/feed.php",
+    "xdkFilter": null
+}));

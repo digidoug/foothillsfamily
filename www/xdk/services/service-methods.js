@@ -226,24 +226,15 @@ intel.xdk.services.iodocs_ = (function () {
   return exports;
 })();;
 /*xdk-auto-gen:service-methods:common:end*/
-/*xdk-auto-gen:service-methods:sandbox:start:26400011618626f09fec707818c872d1*/
-intel.xdk.services.iodocs_.sandbox=function(e){function s(e){try{return JSON.parse(e)}catch(s){return e}}var d={};return d.RESTAPI=function(e){return $.ajax({url:e.URL,method:e.Method,headers:s(e.Headers),data:s(e.body)})},d}(intel.xdk.services.credentials.sandbox,intel.xdk.services.iodocs_.helpers);
+/*xdk-auto-gen:service-methods:sandbox:start:0a84b9d731bbbfcbcff65815f0935cd5*/
+intel.xdk.services.iodocs_.sandbox=function(e){function s(e){try{return JSON.parse(e)}catch(s){return e}}var i={};return i.RESTAPI=function(e){return $.ajax({url:e.URL,method:e.Method,headers:s(e.Headers),data:s(e.body)})},i}(intel.xdk.services.credentials.sandbox,intel.xdk.services.iodocs_.helpers);
 /*xdk-auto-gen:service-methods:sandbox:end*/
-/*xdk-auto-gen:service-methods:RSS:start:c537ab3fda270595aa3e1654d0f94090*/
-intel.xdk.services.iodocs_.RSS=function(e,i){var s={};return s.Request=function(e){return $.ajax(e)},s}(intel.xdk.services.credentials.RSS,intel.xdk.services.iodocs_.helpers);
+/*xdk-auto-gen:service-methods:RSS:start:7bda3bd9228ff6b52dfda995cc1dff4b*/
+intel.xdk.services.iodocs_.RSS=function(e,s){var i={};return i.Request=function(e){return $.ajax(e)},i}(intel.xdk.services.credentials.RSS,intel.xdk.services.iodocs_.helpers);
 /*xdk-auto-gen:service-methods:RSS:end*/
-/*xdk-auto-gen:service-methods:blog:start:26e43b9a9aa7445b1aa97721151b16ba*/
-intel.xdk.services.blog=intel.xdk.services.iodocs_.bindCommon.bind(null,"intel.xdk.services.blog",intel.xdk.services.iodocs_.sandbox.RESTAPI,{Method:"GET",URL:"http://www.fsd38.ab.ca/feed.php",Headers:'{ "Content-Type": "application/json" }',Body:""});
-/*xdk-auto-gen:service-methods:blog:end*/
-/*xdk-auto-gen:service-methods:blognew:start:21df6ba9b6f8f19b1766961fcd41ba18*/
-intel.xdk.services.blognew=intel.xdk.services.iodocs_.bindCommon.bind(null,"intel.xdk.services.blognew",intel.xdk.services.iodocs_.sandbox.RESTAPI,{Method:"GET",URL:"http://www.fsd38.ab.ca/feed.php",Headers:'{ "Content-Type": "application/json" }',Body:""});
-/*xdk-auto-gen:service-methods:blognew:end*/
-/*xdk-auto-gen:service-methods:blognew1:start:ac8ede5ac86562ec0954e68ae4bf4622*/
-intel.xdk.services.blognew1=intel.xdk.services.iodocs_.bindCommon.bind(null,"intel.xdk.services.blognew1",intel.xdk.services.iodocs_.sandbox.RESTAPI,{Method:"GET",URL:"http://www.fsd38.ab.ca/feed.php",Headers:'{ "Content-Type": "application/json" }',Body:""});
-/*xdk-auto-gen:service-methods:blognew1:end*/
-/*xdk-auto-gen:service-methods:supportive:start:8228c04f059883e61a3dae5fce7245a5*/
-intel.xdk.services.supportive=intel.xdk.services.iodocs_.bindCommon.bind(null,"intel.xdk.services.supportive",intel.xdk.services.iodocs_.sandbox.RESTAPI,{Method:"GET",URL:"http://www.fsd38.ab.ca/API.php/341",Headers:"{ }",Body:""});
-/*xdk-auto-gen:service-methods:supportive:end*/
-/*xdk-auto-gen:service-methods:stuvoice:start:92027c57e0d8fb4428e655bb39306eaa*/
-intel.xdk.services.stuvoice=intel.xdk.services.iodocs_.bindCommon.bind(null,"intel.xdk.services.stuvoice",intel.xdk.services.iodocs_.sandbox.RESTAPI,{Method:"GET",URL:"http://www.fsd38.ab.ca/API.php/367",Headers:"{ }",Body:""});
-/*xdk-auto-gen:service-methods:stuvoice:end*/
+/*xdk-auto-gen:service-methods:blogs:start:c87f2c66abe0c22d734bf644f5208102*/
+intel.xdk.services.blogs=intel.xdk.services.iodocs_.bindCommon.bind(null,"intel.xdk.services.blogs",intel.xdk.services.iodocs_.RSS.Request,{url:"http://www.fsd38.ab.ca/feed.php"});
+/*xdk-auto-gen:service-methods:blogs:end*/
+/*xdk-auto-gen:service-methods:asrest:start:69057333fdc10f506dd50305688f42f5*/
+intel.xdk.services.asrest=intel.xdk.services.iodocs_.bindCommon.bind(null,"intel.xdk.services.asrest",intel.xdk.services.iodocs_.sandbox.RESTAPI,{Method:"GET",URL:"http://www.fsd38.ab.ca/feed.php",Headers:'{ "Content-Type": "application/json" }',Body:""});
+/*xdk-auto-gen:service-methods:asrest:end*/
