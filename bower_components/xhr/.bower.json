@@ -1,0 +1,33 @@
+{
+  "name": "xmlhttprequest",
+  "homepage": "https://github.com/ilinsky/xmlhttprequest",
+  "authors": [
+    "Sergey Ilinsky <sergey@ilinsky.com>"
+  ],
+  "description": "Polyfill for XMLHttpRequest 1.0",
+  "main": "XMLHttpRequest.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "xmlhttprequest",
+    "polyfill"
+  ],
+  "license": "LGPL",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "6e39cbc916",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "6e39cbc916b13732a02467008543e2177e01baef"
+  },
+  "_source": "git://github.com/ilinsky/xmlhttprequest.git",
+  "_target": "*",
+  "_originalSource": "ilinsky/xmlhttprequest"
+}

@@ -41,3 +41,4 @@ data_support.ready(intel.xdk.services.stuvoice2.bind(null, {"xdkFilter":null}));
 data_support.ready(intel.xdk.services.NewBlogFeed.bind(null, {"xdkFilter":null}));
 data_support.ready(intel.xdk.services.NewStudentVoice.bind(null, {"xdkFilter":null}));
 data_support.ready(intel.xdk.services.stuvoice.bind(null, {"xdkFilter":null}));
+data_support.ready(intel.xdk.services.blognew1.bind(null, {"xdkFilter":null}));

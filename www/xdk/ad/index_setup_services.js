@@ -64,6 +64,13 @@ data_views.single.push({"selector":"#{{title","options":{"effect":["html","attri
 data_views.single.push({"selector":"#{{title}","options":{"effect":["html","attributes"]}});
 
 data_views.single.push({"selector":"#{{title}}","options":{"effect":["html","attributes"]}});
+
+
+
+
+
+
+
 /* prepare controllers */
 
 
@@ -106,3 +113,4 @@ data_support.prepare_mvc("#{{title", "intel.xdk.services.stuvoice", [], "null", 
 data_support.prepare_mvc("#{{title}", "intel.xdk.services.stuvoice", [], "null", data_views);
 
 data_support.prepare_mvc("#{{title}}", "intel.xdk.services.stuvoice", [], "null", data_views);
+

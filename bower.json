@@ -1,0 +1,7 @@
+{
+  "name": "FSDES2",
+  "dependencies": {
+    "xhr-ajax": "2.0.1",
+    "jQuery": "3.1.1"
+  }
+}

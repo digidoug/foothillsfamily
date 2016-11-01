@@ -1,0 +1,25 @@
+{
+  "name": "xhr-ajax",
+  "version": "2.0.1",
+  "main": "xhr-ajax.js",
+  "ignore": [
+    "test/*",
+    "Gruntfile.js"
+  ],
+  "dependencies": {
+    "xhr": "ilinsky/xmlhttprequest",
+    "blanket": "alex-seville/blanket",
+    "qunit": "*"
+  },
+  "homepage": "https://github.com/craig0990/xhr-ajax",
+  "_release": "2.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.0.1",
+    "commit": "30a046f56146538961bbf3475720a4284f6fe755"
+  },
+  "_source": "https://github.com/craig0990/xhr-ajax.git",
+  "_target": "2.0.1",
+  "_originalSource": "xhr-ajax",
+  "_direct": true
+}
